@@ -1,5 +1,7 @@
 # MetaVerseChecker
- Basic social media checker and scorer!
+ Basic social media checker and scorer! For every successful hit on specified social media platforms will deduct 25 points from your starting score of 300!
+
+ Updating each section with last image captured of a successful hit coming soon.
 
 # Installation
 
