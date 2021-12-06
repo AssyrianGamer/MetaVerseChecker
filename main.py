@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 
-"""main.py: This is the main function of the script. Ok fine - it's the only function! XD"""
+"""main.py: This is the main function of the script. Ok fine - it's the only function! XD My first actual publishing of anything somewhat worthwhile on GitHub - be nice."""
 
 __name__ = "MetaVerseChecker"
-__author__ = "Andrew Kumar"
-__copyright__ = "Copyright 2021, Andrew Kumar"
+__author__ = "Andrew George Zaia"
+__copyright__ = "Copyright 2021, Andrew George Zaia"
 __credits__ = ["Andrew Kumar"]
 __license__ = "GPL"
 __version__ = "1.0.0"
-__maintainer__ = "Andrew Kumar"
-__email__ = "andrew.kumar@unsw.edu.au"
+__maintainer__ = "Andrew George Zaia"
+__email__ = "andrew.zaia@outlook.com.au"
 __status__ = "Production"
 
 import os
@@ -37,28 +37,28 @@ igUsername_var = tk.StringVar()
 igMetaScoreResult_var = tk.StringVar()
 twUsername_var = tk.StringVar()
 twMetaScoreResult_var = tk.StringVar()
-metaVersalTitleResult_var = tk.StringVar()
+MetaVerseTitleResult_var = tk.StringVar()
 
-fbMetaVersalScore = 100
-fbMetaVersalScoreResult_var = tk.IntVar()
-fbMetaScoreResult_var.set(fbMetaVersalScore)
+fbMetaVerseScore = 100
+fbMetaVerseScoreResult_var = tk.IntVar()
+fbMetaScoreResult_var.set(fbMetaVerseScore)
 
-igMetaVersalScore = 100
-igMetaVersalScoreResult_var = tk.IntVar()
-igMetaScoreResult_var.set(igMetaVersalScore)
+igMetaVerseScore = 100
+igMetaVerseScoreResult_var = tk.IntVar()
+igMetaScoreResult_var.set(igMetaVerseScore)
 
-twMetaVersalScore = 100
-twMetaVersalScoreResult_var = tk.IntVar()
-twMetaScoreResult_var.set(twMetaVersalScore)
+twMetaVerseScore = 100
+twMetaVerseScoreResult_var = tk.IntVar()
+twMetaScoreResult_var.set(twMetaVerseScore)
 
-metaVersalScore = fbMetaVersalScore + igMetaVersalScore + twMetaVersalScore
-metaVersalScoreResult_var = tk.IntVar()
-metaVersalScoreResult_var.set(metaVersalScore)
+MetaVerseScore = fbMetaVerseScore + igMetaVerseScore + twMetaVerseScore
+MetaVerseScoreResult_var = tk.IntVar()
+MetaVerseScoreResult_var.set(MetaVerseScore)
 
-metaVersalTitleResult_var.set("Cyber Master!") # You always start at Cyber Master! Osu!
+MetaVerseTitleResult_var.set("Cyber Master!") # You always start at Cyber Master! Osu!
 
 # Set the amount of penalty points applied when a social media account is detected. Default 50.
-metaVersalReducer = 50
+MetaVerseReducer = 25
 
 status = tk.StringVar()
 status.set("Loaded "+ __name__ + " v" + __version__ + ". Created by " + __author__)
@@ -259,14 +259,14 @@ def menubarReset():
     fbUsername_var.set("")
     igUsername_var.set("")
     twUsername_var.set("")
-    fbMetaVersalScore = 100
-    igMetaVersalScore = 100
-    twMetaVersalScore = 100
-    fbMetaScoreResult_var.set(fbMetaVersalScore)
-    igMetaScoreResult_var.set(igMetaVersalScore)
-    twMetaScoreResult_var.set(twMetaVersalScore)
-    metaVersalScoreResult_var.set(fbMetaVersalScore + igMetaVersalScore + twMetaVersalScore)
-    metaVersalTitleResult_var.set("Cyber Master")
+    fbMetaVerseScore = 100
+    igMetaVerseScore = 100
+    twMetaVerseScore = 100
+    fbMetaScoreResult_var.set(fbMetaVerseScore)
+    igMetaScoreResult_var.set(igMetaVerseScore)
+    twMetaScoreResult_var.set(twMetaVerseScore)
+    MetaVerseScoreResult_var.set(fbMetaVerseScore + igMetaVerseScore + twMetaVerseScore)
+    MetaVerseTitleResult_var.set("Cyber Master")
     status.set(__name__ + " details have been reset!")
 
 # Menubar function - Help
@@ -280,59 +280,59 @@ def menubarHelp():
 
 # Score and title function
 def metaScore():
-    global metaVersalScore
-    metaVersalScore = fbMetaVersalScore + igMetaVersalScore + twMetaVersalScore
-    metaVersalScoreResult_var.set(metaVersalScore)
-    if metaVersalScore >= 280:
-        metaVersalTitleResult_var.set("Cyber Master!")
-    elif metaVersalScore >= 250:
-        metaVersalTitleResult_var.set("Cyber Knight!")
-    elif metaVersalScore >= 200:
-        metaVersalTitleResult_var.set("Cyber Padawan!")
-    elif metaVersalScore >= 150:
-        metaVersalTitleResult_var.set("I may have some social media.")
-    elif metaVersalScore >= 100:
-        metaVersalTitleResult_var.set("Ok, I have a few social media accounts.")
-    elif metaVersalScore >= 50:
-        metaVersalTitleResult_var.set("FINE! I have a social media addiction!")
-    elif metaVersalScore <= 50:
-        metaVersalTitleResult_var.set("Game over. Please insert coin.")
+    global MetaVerseScore
+    MetaVerseScore = fbMetaVerseScore + igMetaVerseScore + twMetaVerseScore
+    MetaVerseScoreResult_var.set(MetaVerseScore)
+    if MetaVerseScore >= 280:
+        MetaVerseTitleResult_var.set("Cyber Master!")
+    elif MetaVerseScore >= 250:
+        MetaVerseTitleResult_var.set("Cyber Knight!")
+    elif MetaVerseScore >= 200:
+        MetaVerseTitleResult_var.set("Cyber Padawan!")
+    elif MetaVerseScore >= 150:
+        MetaVerseTitleResult_var.set("I may have some social media.")
+    elif MetaVerseScore >= 100:
+        MetaVerseTitleResult_var.set("Ok, I have a few social media accounts.")
+    elif MetaVerseScore >= 50:
+        MetaVerseTitleResult_var.set("FINE! I have a social media addiction!")
+    elif MetaVerseScore <= 50:
+        MetaVerseTitleResult_var.set("Game over. Please insert coin.")
 
 # Facebook score penalty function
 def fbMetaScore():
-    global fbMetaVersalScore
-    if fbMetaVersalScore > 0:
-        fbMetaVersalScore -= metaVersalReducer
+    global fbMetaVerseScore
+    if fbMetaVerseScore > 0:
+        fbMetaVerseScore -= MetaVerseReducer
     else:
         print("You really need to re-assess your social footprint!")
-    fbMetaScoreResult_var.set(fbMetaVersalScore)
-    return fbMetaVersalScore
+    fbMetaScoreResult_var.set(fbMetaVerseScore)
+    return fbMetaVerseScore
 
 def fbImageUpdate():
     fbImageCanvas.pack(side=RIGHT)
 
 # Instagram score penalty function
 def igMetaScore():
-    global igMetaVersalScore
-    if igMetaVersalScore > 0:
-        igMetaVersalScore -= metaVersalReducer
+    global igMetaVerseScore
+    if igMetaVerseScore > 0:
+        igMetaVerseScore -= MetaVerseReducer
     else:
         print("You really need to re-assess your social footprint!")
-    igMetaScoreResult_var.set(igMetaVersalScore)
-    return igMetaVersalScore
+    igMetaScoreResult_var.set(igMetaVerseScore)
+    return igMetaVerseScore
 
 def igImageUpdate():
     igImageCanvas.pack(side=RIGHT)
 
 # Twitter score penalty function
 def twMetaScore():
-    global twMetaVersalScore
-    if twMetaVersalScore > 0:
-        twMetaVersalScore -= metaVersalReducer
+    global twMetaVerseScore
+    if twMetaVerseScore > 0:
+        twMetaVerseScore -= MetaVerseReducer
     else:
         print("You really need to re-assess your social footprint!")
-    twMetaScoreResult_var.set(twMetaVersalScore)
-    return twMetaVersalScore
+    twMetaScoreResult_var.set(twMetaVerseScore)
+    return twMetaVerseScore
 
 def twImageUpdate():
     twImageCanvas.pack(side=RIGHT)
@@ -391,8 +391,8 @@ igFormScoreLabel = tk.Label(score, text="Instagram Score: ").place(x=0, y=40)
 igFormScoreResultLabel = tk.Label(score, textvariable=igMetaScoreResult_var).place(x=10, y=60)
 twFormScoreLabel = tk.Label(score, text="Twitter Score: ").place(x=0, y=80)
 twFormScoreResultLabel = tk.Label(score, textvariable=twMetaScoreResult_var).place(x=10, y=100)
-metaVersalScoreLabel = tk.Label(score, textvariable=metaVersalScoreResult_var, font=("Arial", 44)).place(x=window_width/2, y=80, anchor=S)
-metaVersalTitleLabel = tk.Label(score, text="Title: ", textvariable=metaVersalTitleResult_var, font=("Arial", 10)).place(x=window_width/2, y=100, anchor=S)
+MetaVerseScoreLabel = tk.Label(score, textvariable=MetaVerseScoreResult_var, font=("Arial", 44)).place(x=window_width/2, y=80, anchor=S)
+MetaVerseTitleLabel = tk.Label(score, text="Title: ", textvariable=MetaVerseTitleResult_var, font=("Arial", 10)).place(x=window_width/2, y=100, anchor=S)
 
 # FB label frame
 fb = tk.LabelFrame(root, text="Facebook Tool", width=150, height=75)
